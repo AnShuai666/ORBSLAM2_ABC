@@ -26,3 +26,5 @@ else()
     message(FATAL_ERROR "编译器${CMAKE_CXX_FLAGS}没有C++11支持。请用不同的c++编译器。")
 endif ()
 
+#添加依赖库查找模块
+list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
