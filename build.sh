@@ -23,7 +23,7 @@ cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j
 cd ../../..
 
-echo "配置并编译ORB_SLAM2库..."
+echo "配置并编译ORBSLAM2_ABC库..."
 
 mkdir build
 cd build
