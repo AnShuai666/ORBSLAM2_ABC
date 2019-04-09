@@ -28,3 +28,15 @@ endif ()
 
 #添加依赖库查找模块
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
+
+find_package(OpenCV 3.0 RUIET)
+if(NOT OpenCV_FOUND)
+    find_package(OpenCV 2.4.3 QUIET)
+    if (NOT OpenCV_FOUND)
+        message(FATAL_ERROR "OpenCV > 2.4.3的版本未找到。")
+    endif ()
+endif()
+
+find_package(Eigen3 3.1.0 REQUIRED)
+find_package(Pangolin REQUIRED)
+
