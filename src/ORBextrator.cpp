@@ -27,7 +27,8 @@
 #include "ORBextrator.h"
 ORBSLAM2_ABC_NAMESPACE_BEGIN
 
-ORBextractor::ORBextractor()
+ORBextractor::ORBextractor(int nfeatures, float scaleFactor,
+        int nlevels, int iniThFAST, int minThFAST)
 {
 
 }

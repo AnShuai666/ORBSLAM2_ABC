@@ -34,10 +34,27 @@ ORBSLAM2_ABC_NAMESPACE_BEGIN
 class ORBextractor
 {
 public:
+/*
+*  @property   ORB特征提取
+*  @func       对图像进行ORB特征提取，提取nfeatures个
+*  @param_in   nfeatures       关键点提取数量
+*  @param_in   scaleFactor     金字塔图像缩放因子
+*  @param_in   nlevels         金字塔图像层数
+*  @param_in   iniThFAST       FAST角点检测初始化阈值
+*  @param_in   minThFAST       FAST角点检测最低阈值
+*/
+ORBextractor(int nfeatures,float scaleFactor,int nlevels,
+        int iniThFAST,int minThFAST);
 
-    ORBextractor();
-    ~ORBextractor(){}
+~ORBextractor(){}
+
 protected:
+
+    int nfeatures;
+    double scaleFactor;
+    int nlevels;
+    int iniThFAST;
+    int minThFAST;
 
 
 };
